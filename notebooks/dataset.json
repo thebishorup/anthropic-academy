@@ -1,0 +1,49 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "72 kg",
+      "goal": "Prepare for 200m freestyle competition in 5 days with two daily training sessions (morning and evening)",
+      "restrictions": "Lactose intolerant; no dairy products"
+    },
+    "solution_criteria": [
+      "Plan includes specific meal timing around both morning and evening training sessions",
+      "Hydration strategy addresses fluid intake during and between training sessions",
+      "Protein intake is specified with timing for recovery between dual daily sessions",
+      "Plan is presented in concise, single-day format without excessive detail"
+    ],
+    "task_description": "Write a compact, consise 1 day mean plan for a single athelete",
+    "scenario": "Testing with a competitive swimmer preparing for a specific event, needing a concise plan that addresses hydration, protein recovery timing, and energy demands for multiple daily training sessions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "82 kg",
+      "goal": "Build lean muscle while maintaining CrossFit performance across varied WOD intensities",
+      "restrictions": "Dairy intolerance; prefers meals requiring minimal prep (max 30 min total daily cooking)"
+    },
+    "solution_criteria": [
+      "Provides 5-6 balanced meals/snacks with macros supporting strength and endurance",
+      "All meals are dairy-free and require \u226430 minutes total preparation time",
+      "Meal timing aligns with typical CrossFit training schedule (morning, post-workout, evening)"
+    ],
+    "task_description": "Write a compact, consise 1 day mean plan for a single athelete",
+    "scenario": "Testing with a recreational CrossFit enthusiast who requires a balanced macro meal plan that accommodates varied workout intensities and includes meal prep efficiency constraints"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "68 kg",
+      "goal": "Prepare for marathon race with a 20km long run training session scheduled for 10:00 AM",
+      "restrictions": "Lactose intolerant, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan includes at least 3000+ calories with 55-60% from carbohydrates to support endurance training",
+      "Pre-run meal (2-3 hours before 10:00 AM) and post-run recovery nutrition are specifically timed and detailed",
+      "All meals comply with stated dietary restrictions (lactose-free, nut-free)",
+      "Plan is presented in a compact, easy-to-read 1-day format"
+    ],
+    "task_description": "Write a compact, consise 1 day mean plan for a single athelete",
+    "scenario": "Testing with a professional endurance athlete (marathon runner) who needs a high-calorie, carb-focused meal plan with specific timing around long training sessions"
+  }
+]

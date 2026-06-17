@@ -1,0 +1,461 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.7 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">66.7%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a recreational CrossFit enthusiast who requires a balanced macro meal plan that accommodates varied workout intensities and includes meal prep efficiency constraints</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 82 kg<br><strong>goal:</strong> Build lean muscle while maintaining CrossFit performance across varied WOD intensities<br><strong>restrictions:</strong> Dairy intolerance; prefers meals requiring minimal prep (max 30 min total daily cooking)</td>
+                <td class="criteria">• Provides 5-6 balanced meals/snacks with macros supporting strength and endurance<br>• All meals are dairy-free and require ≤30 minutes total preparation time<br>• Meal timing aligns with typical CrossFit training schedule (morning, post-workout, evening)</td>
+                <td class="output"><pre># 1-Day Meal Plan for CrossFit Athlete
+**Goal:** Build lean muscle while maintaining performance | **Restriction:** Dairy intolerance | **Prep time:** ≤30 min/day
+
+---
+
+## DAILY NUTRITIONAL TARGETS
+- **Calories:** 2,850 kcal
+- **Protein:** 165g (23%)
+- **Carbs:** 340g (48%)
+- **Fat:** 95g (30%)
+
+---
+
+## MEAL BREAKDOWN
+
+### **BREAKFAST (6:30 AM)** — Pre-Workout Fuel
+**Oatmeal Power Bowl**
+- 80g rolled oats
+- 40g almond butter
+- 1 medium banana
+- 30ml maple syrup
+- Pinch of salt & cinnamon
+
+**Nutrition:** 610 cal | P: 18g | C: 82g | F: 22g
+**Prep:** 5 min (microwave oats, mix)
+
+---
+
+### **PRE-WORKOUT SNACK (1 hour before WOD)**
+**Quick Carb Boost**
+- 1 large apple
+- 25g raw almonds
+- Rice cake with 15g almond butter
+
+**Nutrition:** 320 cal | P: 10g | C: 38g | F: 15g
+**Prep:** 2 min (assembly only)
+
+---
+
+### **LUNCH (12:30 PM)** — Post-Workout Recovery
+**Grilled Chicken & Sweet Potato**
+- 200g grilled chicken breast
+- 250g roasted sweet potato
+- 2 tbsp olive oil (for cooking)
+- Steamed broccoli (150g)
+- Sea salt & black pepper
+
+**Nutrition:** 720 cal | P: 52g | C: 78g | F: 18g
+**Prep:** 20 min (grill chicken, roast sweet potato, steam broccoli)
+
+---
+
+### **AFTERNOON SNACK (3:30 PM)** — Energy/Recovery
+**Tropical Smoothie**
+- 250ml unsweetened almond milk
+- 35g plant-based protein powder (vanilla)
+- 120g frozen mango
+- 1 tbsp coconut oil
+- Handful of spinach
+
+**Nutrition:** 320 cal | P: 28g | C: 28g | F: 12g
+**Prep:** 3 min (blend)
+
+---
+
+### **DINNER (7:00 PM)** — Lean Protein Focus
+**Salmon & Quinoa Bowl**
+- 180g baked salmon
+- 150g cooked quinoa
+- Roasted asparagus (120g) with garlic & olive oil (1 tbsp)
+- Lemon juice & herbs
+
+**Nutrition:** 880 cal | P: 57g | C: 114g | F: 28g
+**Prep:** 25 min (bake salmon, cook quinoa, roast vegetables)
+
+---
+
+## HYDRATION PROTOCOL
+- **Morning:** 500ml water + electrolytes
+- **Pre-WOD:** 250ml water
+- **During WOD:** 500ml coconut water (natural carbs/electrolytes)
+- **Post-WOD:** 750ml water
+- **Throughout day:** Minimum 3L total
+
+---
+
+## NOTES FOR ATHLETE SUCCESS
+
+✅ **Dairy-Free Confirmed:** All items naturally dairy-free; almond milk used instead of cow's milk
+
+✅ **Total Prep Time:** ~30 minutes (mostly passive cooking)
+
+✅ **Budget-Friendly:** Uses affordable staples (oats, chicken, sweet potatoes, rice, salmon, quinoa)
+
+✅ **Timing:** Meals spaced 2-3 hours; carbs prioritized around training window
+
+✅ **Macros Aligned:** 165g protein supports muscle synthesis; high carbs sustain CrossFit performance across varied intensities
+
+✅ **Flexibility:** Swap proteins (salmon↔chicken↔lean beef); adjust carb sources (rice↔potatoes↔pasta); substitute almond butter for tahini</pre></td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution fully satisfies all three mandatory requirements with precision: daily calories are clearly stated (2,850 kcal), macronutrient breakdown is provided in both grams and percentages, and all five meals include exact food items, specific portions, and meal timing recommendations. All secondary criteria are met: meals are balanced and support the stated goals, dairy-free status is confirmed throughout, prep time totals ≤30 minutes with individual meal prep times listed, and timing aligns with a typical CrossFit athlete's schedule (pre-workout, post-workout, evening). The solution demonstrates strong practical understanding with additional value-adds (hydration protocol, flexibility notes, budget awareness) that enhance usability without detracting from core requirements. Minor presentation inconsistencies in macro percentages and implicit assumptions about cooking overlap do not constitute violations of stated criteria.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a professional endurance athlete (marathon runner) who needs a high-calorie, carb-focused meal plan with specific timing around long training sessions</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 68 kg<br><strong>goal:</strong> Prepare for marathon race with a 20km long run training session scheduled for 10:00 AM<br><strong>restrictions:</strong> Lactose intolerant, no nuts</td>
+                <td class="criteria">• Meal plan includes at least 3000+ calories with 55-60% from carbohydrates to support endurance training<br>• Pre-run meal (2-3 hours before 10:00 AM) and post-run recovery nutrition are specifically timed and detailed<br>• All meals comply with stated dietary restrictions (lactose-free, nut-free)<br>• Plan is presented in a compact, easy-to-read 1-day format</td>
+                <td class="output"><pre># 1-Day Meal Plan for Marathon Training Athlete
+**Goal:** Prepare for marathon with 20km long run at 10:00 AM | **Restrictions:** Lactose intolerant, no nuts | **Focus:** Sustained energy & recovery
+
+---
+
+## DAILY NUTRITIONAL TARGETS
+- **Calories:** 2,950 kcal
+- **Protein:** 128g (17%)
+- **Carbs:** 440g (60%)
+- **Fat:** 78g (24%)
+
+---
+
+## MEAL BREAKDOWN
+
+### **BREAKFAST (6:30 AM)** — Pre-Long Run Fuel
+**Carb-Loading Oatmeal with Fruit**
+- 100g rolled oats
+- 400ml unsweetened oat milk
+- 1 medium banana
+- 40g dried raisins
+- 15ml honey
+- Pinch of cinnamon & sea salt
+
+**Nutrition:** 520 cal | P: 12g | C: 108g | F: 5g
+**Prep:** 8 min (microwave oats, stir)
+
+---
+
+### **PRE-RUN SNACK (9:15 AM)** — 45 min Before Start
+**Quick Carbs for Sustained Energy**
+- 2 rice cakes
+- 30g almond butter replacement (sunflower seed butter)
+- 1 medium apple
+- 250ml sports drink (electrolyte-enhanced)
+
+**Nutrition:** 380 cal | P: 8g | C: 52g | F: 16g
+**Prep:** 3 min (assembly only)
+
+---
+
+### **DURING RUN (10:00 AM - 1:30 PM)**
+**Fueling Every 5-6km**
+- Total consumed during 20km run:
+  - 500ml energy drink (carbs + electrolytes)
+  - 2 energy gels (40g carbs each)
+  - 250ml water
+
+**Nutrition:** 240 cal | P: 2g | C: 60g | F: 0g
+
+---
+
+### **LUNCH (2:00 PM)** — Immediate Post-Run Recovery
+**Grilled Turkey & White Rice**
+- 220g grilled turkey breast
+- 300g cooked white rice
+- 150g steamed carrots & green beans (with 1 tbsp olive oil)
+- Low-sodium salt & black pepper
+
+**Nutrition:** 820 cal | P: 52g | C: 108g | F: 14g
+**Prep:** 25 min (grill turkey, cook rice, steam vegetables)
+
+---
+
+### **AFTERNOON SNACK (4:30 PM)** — Recovery Boost
+**Chocolate Energy Smoothie**
+- 300ml unsweetened oat milk
+- 40g plant-based protein powder (chocolate)
+- 1 medium banana
+- 25ml maple syrup
+- 15ml coconut oil
+
+**Nutrition:** 390 cal | P: 28g | C: 42g | F: 14g
+**Prep:** 4 min (blend)
+
+---
+
+### **DINNER (7:00 PM)** — Protein & Complex Carbs
+**Baked Salmon with Sweet Potato**
+- 200g baked salmon fillet
+- 350g roasted sweet potato (cut into wedges)
+- Roasted broccoli (180g) with garlic & 1 tbsp olive oil
+- Lemon wedge & fresh herbs (dill/parsley)
+
+**Nutrition:** 800 cal | P: 48g | C: 70g | F: 29g
+**Prep:** 28 min (bake salmon, roast sweet potato & broccoli)
+
+---
+
+## HYDRATION PROTOCOL
+- **Morning (5:00-6:30 AM):** 500ml water + electrolyte tablet
+- **Pre-Run (9:00-10:00 AM):** 250ml water
+- **During Run (10:00 AM-1:30 PM):** 500ml sports drink (carbs/electrolytes) + 250ml water
+- **Immediate Post-Run (1:30-2:00 </pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements technically but with a critical flaw: it falls 50 calories short of the 3,000+ calorie target specified in the secondary criteria. While this is a narrow miss, it represents a violation of an explicit quantitative requirement. The macronutrient breakdown is sound (59.5% carbs, 17% protein, 24% fat), and the meal plan is well-structured with proper timing for marathon training. All dietary restrictions are properly observed. The plan is compact and readable. However, the calorie deficit combined with the incomplete hydration section prevents a higher score.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a competitive swimmer preparing for a specific event, needing a concise plan that addresses hydration, protein recovery timing, and energy demands for multiple daily training sessions</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 72 kg<br><strong>goal:</strong> Prepare for 200m freestyle competition in 5 days with two daily training sessions (morning and evening)<br><strong>restrictions:</strong> Lactose intolerant; no dairy products</td>
+                <td class="criteria">• Plan includes specific meal timing around both morning and evening training sessions<br>• Hydration strategy addresses fluid intake during and between training sessions<br>• Protein intake is specified with timing for recovery between dual daily sessions<br>• Plan is presented in concise, single-day format without excessive detail</td>
+                <td class="output"><pre># 1-Day Meal Plan for 200m Freestyle Swimmer
+**Goal:** Peak performance for 200m freestyle competition in 5 days | **Restriction:** Lactose intolerant (dairy-free) | **Training:** 2 daily sessions (morning & evening)
+
+---
+
+## DAILY NUTRITIONAL TARGETS
+- **Calories:** 3,200 kcal
+- **Protein:** 144g (18%)
+- **Carbs:** 480g (60%)
+- **Fat:** 107g (30%)
+
+---
+
+## MEAL BREAKDOWN
+
+### **BREAKFAST (6:00 AM)** — Pre-Morning Training Fuel
+**High-Carb Oat Stack**
+- 100g rolled oats
+- 45g honey
+- 1 large banana (sliced)
+- 30g sunflower seed butter
+- 250ml unsweetened almond milk
+- Pinch of sea salt & vanilla extract
+
+**Nutrition:** 680 cal | P: 18g | C: 98g | F: 24g
+**Prep:** 6 min (microwave & mix)
+
+---
+
+### **POST-MORNING TRAINING SNACK (8:30 AM)** — Recovery Window
+**Quick Carb & Protein Blend**
+- 250ml fresh orange juice
+- 35g plant-based protein powder (vanilla)
+- 1 medium apple
+- 20g raw almonds
+
+**Nutrition:** 380 cal | P: 28g | C: 48g | F: 12g
+**Prep:** 3 min (blend & assemble)
+
+---
+
+### **LUNCH (12:30 PM)** — Main Meal & Glycogen Replenishment
+**Grilled Chicken & Rice**
+- 220g grilled chicken breast
+- 280g cooked jasmine rice
+- 180g steamed green beans with garlic (1 tbsp olive oil)
+- Lemon wedge & black pepper
+
+**Nutrition:** 950 cal | P: 55g | C: 125g | F: 18g
+**Prep:** 22 min (grill chicken, cook rice, steam vegetables)
+
+---
+
+### **AFTERNOON SNACK (4:00 PM)** — Pre-Evening Training Energy
+**Energy Balls & Dates**
+- 3 medjool dates (pitted)
+- 50g trail mix (almonds, cashews, raisins, sunflower seeds)
+- 1 tbsp almond butter
+- Herbal tea (chamomile/ginger)
+
+**Nutrition:** 420 cal | P: 12g | C: 52g | F: 20g
+**Prep:** 2 min (assembly)
+
+---
+
+### **DINNER (7:30 PM)** — Post-Evening Training Recovery
+**Baked Salmon & Sweet Potato**
+- 200g baked salmon fillet (brushed with olive oil & herbs)
+- 320g roasted sweet potato (cut into wedges)
+- 150g roasted bell peppers & zucchini (drizzled with 1 tbsp olive oil)
+- Fresh lime juice & parsley
+
+**Nutrition:** 790 cal | P: 48g | C: 92g | F: 28g
+**Prep:** 28 min (bake salmon & vegetables)
+
+---
+
+### **EVENING RECOVERY DRINK (9:30 PM)** — Before Sleep
+**Rehydration & Electrolyte Shake**
+- 300ml coconut water
+- 1 medium banana
+- 20g plant-based protein powder
+- 1 tbsp raw honey
+- Ice
+
+**Nutrition:** 280 cal | P: 15g | C: 65g | F: 1g
+**Prep:** 3 min (blend)
+
+---
+
+## HYDRATION PROTOCOL
+- **6:00 AM:** 500ml water upon waking
+- **Before Morning Training:** 400ml water
+- **During Morning Training:** 600ml water + electrolyte tablets
+- **Post-Morning Training:** 750ml coconut water (natural carbs/minerals)
+- **Midday:** 500ml water with lunch
+- **Before Evening Training:** 400ml water
+-</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it includes daily calories (stated as 3,200), macronutrient breakdown (P/C/F specified), and detailed meals with exact portions and timing. The plan excellently addresses the secondary criteria with specific meal timing around both training sessions, comprehensive hydration strategy with during/between training protocols, and strategically timed protein for dual-session recovery. However, the incomplete hydration section and caloric/macro calculation discrepancies are notable deficiencies. The plan is concise and single-day formatted as requested. Despite these issues, the core requirements are satisfied with strong execution on the training-specific meal timing and recovery nutrition strategy.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

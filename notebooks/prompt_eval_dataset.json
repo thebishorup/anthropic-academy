@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Write a Python function that parses an AWS S3 bucket URI (s3://bucket-name/key/path) and returns a dictionary with separate 'bucket' and 'key' fields",
+    "format": "python",
+    "solution_criteria": "The function should accept a single S3 URI string as input, correctly extract the bucket name and object key, handle URIs with and without trailing slashes, and return a dictionary with 'bucket' and 'key' keys containing the parsed values"
+  },
+  {
+    "task": "Create a JSON configuration object for an AWS Lambda function that includes environment variables for database connection, API endpoint, and a timeout setting of 60 seconds",
+    "format": "json",
+    "solution_criteria": "The JSON object should contain a valid structure with environment variables section, a timeout property set to 60, and at minimum three environment variable entries (database connection string, API endpoint URL, and one additional config). The JSON must be valid and parseable"
+  },
+  {
+    "task": "Write a regular expression that matches valid AWS IAM role ARN formats (e.g., arn:aws:iam::123456789012:role/RoleName)",
+    "format": "regex",
+    "solution_criteria": "The regex should match valid IAM role ARNs with 12-digit account IDs and alphanumeric role names containing hyphens and forward slashes, should not match invalid ARNs with incorrect prefix or missing components, and should be case-sensitive"
+  }
+]
